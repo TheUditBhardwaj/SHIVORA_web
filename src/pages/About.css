@@ -1,0 +1,170 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .about-layout { grid-template-columns: 0.95fr 1.05fr; }
+}
+
+.about-img-frame {
+  position: relative;
+  border-radius: var(--r-xl);
+  padding: 1rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow: var(--sh-lg), 0 0 60px rgba(16,185,129,0.08);
+}
+.about-img-frame::before {
+  content: '';
+  position: absolute;
+  top: -15px; right: -15px;
+  width: 100%; height: 100%;
+  border-radius: var(--r-xl);
+  background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(99,102,241,0.15));
+  filter: blur(20px);
+  z-index: -1;
+}
+.about-img-frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: calc(var(--r-xl) - 8px);
+  display: block;
+}
+.about-img-tag {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  box-shadow: var(--sh-md);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.badge-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(16,185,129,0.2); }
+  50% { box-shadow: 0 0 0 7px rgba(16,185,129,0.08); }
+}
+
+.about-lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.about-body {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* Mission & Vision */
+.mission-section {
+  background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+  position: relative;
+  overflow: hidden;
+}
+.mission-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 20% 60%, rgba(16,185,129,0.12), transparent 50%),
+              radial-gradient(circle at 80% 30%, rgba(99,102,241,0.1), transparent 50%);
+}
+.mission-section .section-title { color: white; }
+.mission-section .section-label { background: rgba(16,185,129,0.2); border-color: rgba(16,185,129,0.3); }
+
+.mv-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) { .mv-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.mv-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  padding: 3rem;
+  transition: var(--transition);
+}
+.mv-card:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-6px);
+}
+.mv-icon {
+  width: 70px; height: 70px;
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.75rem;
+  transition: var(--transition);
+}
+.mission-icon { background: rgba(16,185,129,0.2); color: var(--secondary); }
+.vision-icon  { background: rgba(99,102,241,0.2);  color: #a5b4fc; }
+.mv-card:hover .mv-icon { transform: scale(1.1) rotate(-5deg); }
+.mv-card h3 { color: white; font-size: 1.5rem; margin-bottom: 1rem; }
+.mv-card p  { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.8; }
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) { .values-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.value-card {
+  background: white;
+  border-radius: var(--r-lg);
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--sh-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sh-lg), var(--sh-glow);
+  border-color: rgba(16,185,129,0.15);
+}
+.value-icon {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: var(--secondary-dim);
+  color: var(--secondary);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.75rem;
+  transition: var(--transition);
+}
+.value-card:hover .value-icon {
+  background: var(--secondary);
+  color: white;
+  transform: scale(1.1);
+}
+.value-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+.value-card p  { color: var(--text-muted); line-height: 1.7; }

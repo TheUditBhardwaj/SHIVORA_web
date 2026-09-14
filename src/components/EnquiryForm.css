@@ -1,0 +1,45 @@
+.enquiry-form-wrapper {
+  background: white;
+  padding: 3rem;
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-lg);
+  border: 1px solid var(--border);
+}
+
+.form-group { margin-bottom: 1.5rem; }
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+  background-color: var(--bg);
+  appearance: none;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.12);
+  background: white;
+}
+.form-control::placeholder { color: var(--text-light); }
+
+textarea.form-control { resize: vertical; min-height: 130px; }
+select.form-control { cursor: pointer; }
+
+.w-100 { width: 100%; }
+.submit-btn { margin-top: 1rem; padding: 1.1rem; font-size: 1.05rem; width: 100%; justify-content: center; }
