@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Pill, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import logoImg from '../assets/logo.jpeg';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-section">
           <Link to="/" className="footer-logo">
-            <Pill className="logo-icon" size={24} />
+            <img src={logoImg} alt="SHIVORA PHARMA" className="footer-logo-img" />
             <span>SHIVORA PHARMA</span>
           </Link>
           <p className="footer-desc">
@@ -29,10 +30,6 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <ul className="footer-contact">
-            <li>
-              <MapPin size={18} />
-              <span>66A, Subham Vihar, Haridwar (Uttrakhand)</span>
-            </li>
             <li>
               <Phone size={18} />
               <span>+91 9193831232 <br/> +91 9286581969 <br/> +91 7669268440</span>

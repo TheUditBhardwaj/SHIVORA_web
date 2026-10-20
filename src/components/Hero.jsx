@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import heroImg from '../assets/hero_pharma.jpg';
+import logoImg from '../assets/logo.jpeg';
 import './Hero.css';
 
 const Hero = () => {
@@ -62,7 +63,13 @@ const Hero = () => {
         <div className="hero-visual">
           <div className="hero-img-frame">
             <img src={heroImg} alt="Premium healthcare wellness products" className="hero-img" />
-
+            <div className="hero-img-badge">
+              <img src={logoImg} alt="SHIVORA PHARMA" className="hero-badge-logo" />
+              <div>
+                <span className="hero-badge-title">SHIVORA PHARMA</span>
+                <span className="hero-badge-tagline">Caring Through Innovation</span>
+              </div>
+            </div>
           </div>
         </div>
 

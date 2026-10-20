@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import EnquiryForm from '../components/EnquiryForm';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './Contact.css';
@@ -25,15 +25,6 @@ const Contact = () => {
             Our team is here to assist you with all your trading, distribution, and manufacturing partnership needs. 
             We typically respond within 24 business hours.
           </p>
-
-          <div className="info-card reveal" style={{ transitionDelay: '0.05s' }}>
-            <div className="info-icon"><MapPin size={24} /></div>
-            <div className="info-content">
-              <h3>Office Address</h3>
-              <p><strong>SHIVORA PHARMA</strong></p>
-              <p>66A, Subham Vihar, Haridwar (Uttrakhand), India</p>
-            </div>
-          </div>
 
           <div className="info-card reveal" style={{ transitionDelay: '0.1s' }}>
             <div className="info-icon"><Phone size={24} /></div>

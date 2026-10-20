@@ -162,23 +162,46 @@
 
 .hero-img-badge {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.75rem;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255,255,255,0.9);
   border-radius: 999px;
-  padding: 0.7rem 1.4rem;
+  padding: 0.6rem 1.4rem 0.6rem 0.8rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   white-space: nowrap;
-  box-shadow: var(--sh-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   font-family: 'Outfit', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
   color: var(--text-dark);
+}
+.hero-badge-logo {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+}
+.hero-badge-title {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+.hero-badge-tagline {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.02em;
 }
 .badge-dot {
   width: 10px;

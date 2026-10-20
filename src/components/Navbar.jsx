@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Pill } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.jpeg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <Pill className="logo-icon" size={28} />
+          <img src={logoImg} alt="SHIVORA PHARMA" className="navbar-logo-img" />
           <span>SHIVORA PHARMA</span>
         </Link>
         

@@ -4,6 +4,48 @@
   border-radius: var(--r-lg);
   box-shadow: var(--sh-lg);
   border: 1px solid var(--border);
+  position: relative;
+}
+
+.form-security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #059669;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.form-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.form-alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.form-alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
 }
 
 .form-group { margin-bottom: 1.5rem; }
@@ -36,10 +78,63 @@
   box-shadow: 0 0 0 4px rgba(16,185,129,0.12);
   background: white;
 }
+.form-control.input-error {
+  border-color: #ef4444;
+  background-color: #fffaf0;
+}
+.form-control.input-error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
 .form-control::placeholder { color: var(--text-light); }
+
+.field-error-text {
+  display: block;
+  font-size: 0.8rem;
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+.char-counter {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 0.35rem;
+}
 
 textarea.form-control { resize: vertical; min-height: 130px; }
 select.form-control { cursor: pointer; }
 
 .w-100 { width: 100%; }
-.submit-btn { margin-top: 1rem; padding: 1.1rem; font-size: 1.05rem; width: 100%; justify-content: center; }
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 1.1rem;
+  font-size: 1.05rem;
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
